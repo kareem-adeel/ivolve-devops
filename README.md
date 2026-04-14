@@ -1,4 +1,4 @@
-# ☁️ Cloud DevOps Accelerator Program - iVolve x NTI
+# ☁️ Cloud DevOps Accelerator Program - iVolve 
 
 A hands-on lab portfolio covering the full Cloud DevOps stack, completed as part of the iVolve & NTI Cloud DevOps Accelerator Program.
 
