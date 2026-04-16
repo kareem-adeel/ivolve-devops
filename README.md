@@ -30,4 +30,4 @@ A hands-on lab portfolio covering the full Cloud DevOps stack, completed as part
 
 ---
 
-## 📁 Repository Structure
+
