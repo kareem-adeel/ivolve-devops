@@ -29,23 +29,14 @@ The project structure:
                         └── DemoApplication.java
 ```
 
-![Clone & Project Structure](screenshots/screen1)
+![Clone & Project Structure](screenshots/screen1.png)
 
 ---
 
 ### 2. Write the Dockerfile
-```dockerfile
-FROM maven:3.9.14-eclipse-temurin-17-alpine
-RUN adduser -D appuser && chown -R appuser:appuser /app
-USER appuser
-WORKDIR /app
-COPY . .
-RUN mvn package
-CMD ["java","-jar","target/demo-0.0.1-SNAPSHOT.jar"]
-EXPOSE 8080
-```
 
-![Dockerfile](screen2.png)
+
+![Dockerfile](screenshots/screen2.png)
 
 ---
 
@@ -56,7 +47,7 @@ docker build -t lab1 .
 
 Docker pulls the base image and builds the app layer by layer.
 
-![Docker Build](screen3.png)
+![Docker Build](screenshots/screen3.png)
 
 ---
 
@@ -69,11 +60,9 @@ docker run -d --name firstlab -p 75:8080 lab1
 - `--name firstlab` → Name the container
 - `-p 75:8080` → Map port 75 on host to port 8080 in container
 
-```bash
-docker ps -a
-```
 
-![Docker Run](screen4.png)
+
+![Docker Run](screenshots/screen4.png)
 
 ---
 
@@ -88,7 +77,7 @@ Response:
 Hello from Dockerized Spring Boot!
 ```
 
-![Test App](screen5.png)
+![Test App](screenshots/screen5.png)
 
 ---
 
@@ -99,7 +88,7 @@ docker rm 1958
 docker ps -a
 ```
 
-![Stop & Remove](screen6.png)
+![Stop & Remove](screenshots/screen6.png)
 
 ---
 
