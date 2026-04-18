@@ -1,2 +1,2 @@
 ## Lab 1: Building and Packaging Java Applications with Gradle
-![Lab 1 Screenshot](Screenshots/Screenshot from 2026-04-18 04-32-14.png)
+![Lab 1 Screenshot](Screenshots/Screenshot%20from%202026-04-18%2004-32-14.png)
