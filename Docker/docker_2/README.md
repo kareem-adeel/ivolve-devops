@@ -79,6 +79,8 @@ docker ps
 curl localhost:8080
 # Hello from Dockerized Spring Boot!
 ```
+![Run Container](screenshot/screen6.png)
+
  
 ---
  
@@ -87,6 +89,8 @@ curl localhost:8080
 docker stop container2
 docker rm container2
 ```
+![Run Container](screenshot/screen7.png)
+
  
 ---
  
