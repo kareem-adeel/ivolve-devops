@@ -1,5 +1,5 @@
 # Lab 4: Run Java Spring Boot App in a Container 🐳
- 
+ ![Dockerfile](screenshot/lab4.png)
 ## Objective
 Build the Java application **locally** first, then copy only the JAR file into a lightweight Docker container using a Java 17 runtime image.
  
@@ -25,15 +25,8 @@ cd Docker-1
  
 ### 2. Write the Dockerfile
  
-```dockerfile
-FROM eclipse-temurin:17-jre-alpine
-WORKDIR /app
-COPY target/demo-0.0.1-SNAPSHOT.jar .
-CMD ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
-EXPOSE 8080
-```
  
-![Dockerfile](screen1.png)
+![Dockerfile](screenshot/screen1.png)
  
 > **Note:** We use `17-jre-alpine` not `17-jdk` because we only need to **run** the app, not compile it. JRE is smaller than JDK.
  
@@ -44,8 +37,7 @@ EXPOSE 8080
 mvn package -DskipTests
 ```
  
-![Maven Build](screen2.png)
- 
+![Maven Build](screenshot/screen2.png)
 This generates `target/demo-0.0.1-SNAPSHOT.jar` on your machine.
  
 ---
@@ -55,7 +47,7 @@ This generates `target/demo-0.0.1-SNAPSHOT.jar` on your machine.
 docker build -t lab2 .
 ```
  
-![Docker Build](screen3.png)
+![Docker Build](screenshot/screen3.png)
  
 ---
  
@@ -64,8 +56,7 @@ docker build -t lab2 .
 docker images
 ```
  
-![Image Sizes](screen4.png)
- 
+![Image Sizes](screenshot/screen4.png)
 | Image | Size |
 |---|---|
 | `lab1` (Maven inside) | 670MB |
@@ -79,7 +70,7 @@ docker run -d --name container2 -p 8080:8080 lab2
 docker ps
 ```
  
-![Run Container](screen5.png)
+![Run Container](screenshot/screen5.png)
  
 ---
  
